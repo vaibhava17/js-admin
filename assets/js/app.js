@@ -1,15 +1,14 @@
+const env = {
+  apiUrl: 'https://newkhel.in',
+  // apiUrl: 'http://localhost/apps/js-game',
+  // apiUrl: 'http://localhost/game',
+}
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
 searchButton.addEventListener('click', () => {
   const inputValue = searchInput.value;
   alert(inputValue);
 });
-
-const env = {
-  apiUrl: 'https://newkhel.in',
-  // apiUrl: 'http://localhost/apps/js-game',
-  // apiUrl: 'http://localhost/game',
-}
 
 // let session = localStorage.getItem('session');
 
@@ -61,9 +60,10 @@ async function withdraw() {
 }
 withdraw();
 
-async function addBalance() {
-  let mobile = document.getElementById('mobile').value
-  let balance = document.getElementById('balance').value
+async function addBalance(e) {
+  e.preventDefault();
+	let mobile = document.getElementById('mobile').value
+	let balance = document.getElementById('balance').value
   await axios({
     method: 'put',
     url: `${env.apiUrl}/addbalance.php`,
