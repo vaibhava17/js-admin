@@ -7,8 +7,8 @@ searchButton.addEventListener('click', () => {
 
 const env = {
   apiUrl: 'https://newkhel.in',
- // apiUrl: 'http://localhost/apps/js-game',
- // apiUrl: 'http://localhost/game',
+  // apiUrl: 'http://localhost/apps/js-game',
+  // apiUrl: 'http://localhost/game',
 }
 
 // let session = localStorage.getItem('session');
@@ -18,20 +18,20 @@ let tableData = document.getElementById('withdraw-history')
 tableData.innerHTML = `spinner`
 
 async function withdraw() {
- let list = []
- await axios({
-   method: 'post',
-   url: `${env.apiUrl}/withdrawal_fetch.php`,
-   data: {
-     userid:8530164288
-   }
- }).then((res) => {
-   if (res.data.success == 1) {
-     list = res.data.list;
-     if (list.length > 0) {
-       tableData.innerHTML = list.map((item) => {
-         return (
-           `
+  let list = []
+  await axios({
+    method: 'post',
+    url: `${env.apiUrl}/withdrawal_fetch.php`,
+    data: {
+      userid: 8530164288
+    }
+  }).then((res) => {
+    if (res.data.success == 1) {
+      list = res.data.list;
+      if (list.length > 0) {
+        tableData.innerHTML = list.map((item) => {
+          return (
+            `
              <tr>
                <td>${item.withdrawid}</td>
                <td>${item.userid}</td>
@@ -49,14 +49,33 @@ async function withdraw() {
                <td>${item.action}</td>
              </tr>
            `
-         )
-       })
-     } else {
-       tableData.innerHTML = "No data found!!"
-     }
-   }
- }).catch((err) => {
-   tableData.innerHTML = "Something went wrong!"
- });
+          )
+        })
+      } else {
+        tableData.innerHTML = "No data found!!"
+      }
+    }
+  }).catch((err) => {
+    tableData.innerHTML = "Something went wrong!"
+  });
 }
-withdraw()
+withdraw();
+
+async function addBalance() {
+  let mobile = document.getElementById('mobile').value
+  let balance = document.getElementById('balance').value
+  await axios({
+    method: 'put',
+    url: `${env.apiUrl}/addbalance.php`,
+    data: {
+      mobile: mobile,
+      balance: balance
+    }
+  }).then((res) => {
+    if (res.data.success == 1) {
+      alert(res.data.message);
+    }
+  }).catch((err) => {
+    alert("Something went wrong!")
+  });
+}
