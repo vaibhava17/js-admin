@@ -1,7 +1,7 @@
 const env = {
-  // apiUrl: 'https://newkhel.in',
+   apiUrl: 'https://newkhel.in',
   // apiUrl: 'http://localhost/apps/js-game',
-    apiUrl: 'http://localhost/game',
+    //apiUrl: 'http://localhost/game',
 }
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
