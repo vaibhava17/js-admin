@@ -1,7 +1,7 @@
 const env = {
   apiUrl: 'https://newkhel.in',
   // apiUrl: 'http://localhost/apps/js-game',
-  // apiUrl: 'http://localhost/game',
+  //  apiUrl: 'http://localhost/game',
 }
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
@@ -20,10 +20,7 @@ async function withdraw() {
   let list = []
   await axios({
     method: 'post',
-    url: `${env.apiUrl}/withdrawal_fetch.php`,
-    data: {
-      userid: 8530164288
-    }
+    url: `${env.apiUrl}/withdrawal_fetch_admin.php`
   }).then((res) => {
     if (res.data.success == 1) {
       list = res.data.list;
