@@ -1,7 +1,7 @@
 const env = {
-  apiUrl: 'https://newkhel.in',
+  // apiUrl: 'https://newkhel.in',
   // apiUrl: 'http://localhost/apps/js-game',
-  //  apiUrl: 'http://localhost/game',
+    apiUrl: 'http://localhost/game',
 }
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
@@ -42,7 +42,30 @@ async function withdraw() {
                <td>${item.bankname}</td>
                <td>${item.ifsc}</td>
                <td>${item.accounttype}</td>
-               <td>${item.action}</td>
+               <td><div class="dropdown">
+               <a
+                 class="dropdown-toggle hidden-arrow"
+                 type="button"
+                 id="dropdownMenuicon"
+                 data-mdb-toggle="dropdown"
+                 aria-expanded="false"
+               >
+                 <i class="fas fa-ellipsis-v fa-lg text-dark"></i>
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="dropdownMenuicon">
+                 <li>
+                   <a class="dropdown-item" onclick="updateWithdrawalStatusPaid(${item.withdrawid})" href="#">
+                     <i class="fas fa-plus-circle"></i> paid</a>
+                   
+                 </li>
+                 <li>
+                   <a class="dropdown-item" onclick="updateWithdrawalStatusCancelled(${item.withdrawid})" href="#">
+                     <i class="fas fa-minus-circle"></i> cancel</a>
+                   
+                 </li>
+                 
+               </ul>
+             </div></td>
              </tr>
            `
           )
@@ -56,6 +79,52 @@ async function withdraw() {
   });
 }
 withdraw();
+
+
+
+
+async function updateWithdrawalStatusPaid(withdrawid)
+{
+ 
+  await axios({
+    method: 'put',
+    url: `${env.apiUrl}/updatewithdrawstatus.php?withdrawid=${withdrawid}&withdrawstatus=paid`,
+    data: {
+      // withdrawid: "withdrawid",
+      // withdrawstatus: "paid"
+    }
+  }).then((res) => {
+    if (res.data.success == 1) {
+      alert(res.data.message);
+    }
+  }).catch((err) => {
+    alert("Something went wrong!")
+  });
+
+}
+
+async function updateWithdrawalStatusCancelled(withdrawid)
+{
+ 
+  var cancelled = "cancelled";
+
+
+  await axios({
+    method: 'put',
+    url: `${env.apiUrl}/updatewithdrawstatus.php?withdrawid=${withdrawid}&withdrawstatus=cancelled`,
+    // data: {
+    //   withdrawid: withdrawid,
+    //   withdrawstatus: "cancelled"
+    // }
+  }).then((res) => {
+    if (res.data.success == 1) {
+      alert(res.data.message);
+    }
+  }).catch((err) => {
+    alert("Something went wrong!")
+  });
+
+}
 
 async function addBalance(e) {
   e.preventDefault();
