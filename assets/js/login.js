@@ -2,11 +2,11 @@ let role = localStorage.getItem('role');
 let session = localStorage.getItem('session');
 let token = localStorage.getItem('token');
 const env = {
-  // apiUrl: 'https://newkhel.in',
-  apiUrl: 'http://localhost/apps/js-game',
-  // apiUrl: 'http://localhost/game',
-  baseUrl: 'http://localhost/apps/js-game/index.html',
-  adminBaseUrl: 'http://localhost/apps/js-admin/user.html'
+  apiUrl: 'https://newkhel.in',
+  //apiUrl: 'http://localhost/apps/js-game',
+  //apiUrl: 'http://localhost/game',
+ // baseUrl: 'http://localhost/apps/js-game/index.html',
+ // adminBaseUrl: 'http://localhost/apps/js-admin/user.html'
 }
 
 async function login(e) {
