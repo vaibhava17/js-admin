@@ -12,10 +12,6 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <!-- Main CSS
-    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
-    <!- AXIOS -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -35,24 +31,33 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
     ></script>
-    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
-        <h2>Login</h2>
-    <form>
-
+      <h2>Login</h2>
+      <form>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Mobile</label>
-          <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-         
+          <label for="mobile" class="form-label">Mobile</label>
+          <input
+            type="text"
+            class="form-control"
+            id="mobile"
+          />
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+          />
         </div>
-       
-        <button type="submit" class="btn btn-primary" onclick="login(event)">Submit</button>
+        <button type="submit" class="btn btn-primary" onclick="login(event)">
+          Submit
+        </button>
       </form>
     </div>
     <!-- BOOTSTRAP -->

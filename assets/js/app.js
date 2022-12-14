@@ -1,5 +1,5 @@
 const env = {
-   apiUrl: 'https://newkhel.in',
+  apiUrl: 'https://newkhel.in',
   // apiUrl: 'http://localhost/apps/js-game',
   //  apiUrl: 'http://localhost/game',
 }
@@ -83,9 +83,7 @@ withdraw();
 
 
 
-async function updateWithdrawalStatusPaid(withdrawid)
-{
- 
+async function updateWithdrawalStatusPaid(withdrawid) {
   await axios({
     method: 'put',
     url: `${env.apiUrl}/updatewithdrawstatus.php?withdrawid=${withdrawid}&withdrawstatus=paid`,
@@ -100,15 +98,10 @@ async function updateWithdrawalStatusPaid(withdrawid)
   }).catch((err) => {
     alert("Something went wrong!")
   });
-
 }
 
-async function updateWithdrawalStatusCancelled(withdrawid)
-{
- 
+async function updateWithdrawalStatusCancelled(withdrawid) {
   var cancelled = "cancelled";
-
-
   await axios({
     method: 'put',
     url: `${env.apiUrl}/updatewithdrawstatus.php?withdrawid=${withdrawid}&withdrawstatus=cancelled`,
@@ -123,17 +116,11 @@ async function updateWithdrawalStatusCancelled(withdrawid)
   }).catch((err) => {
     alert("Something went wrong!")
   });
-
 }
 
 
 
-async function updateWithdrawalStatusCancelled(withdrawid)
-{
- 
-
-
-
+async function updateWithdrawalStatusCancelled(withdrawid) {
   await axios({
     method: 'put',
     url: `${env.apiUrl}/updatewithdrawstatus.php?withdrawid=${withdrawid}&withdrawstatus=cancelled`,
@@ -148,13 +135,12 @@ async function updateWithdrawalStatusCancelled(withdrawid)
   }).catch((err) => {
     alert("Something went wrong!")
   });
-
 }
 
 async function addBalance(e) {
   e.preventDefault();
-	let mobile = document.getElementById('mobile').value
-	let balance = document.getElementById('balance').value
+  let mobile = document.getElementById('mobile').value
+  let balance = document.getElementById('balance').value
   await axios({
     method: 'put',
     url: `${env.apiUrl}/addbalance.php`,
@@ -173,8 +159,8 @@ async function addBalance(e) {
 
 async function deductBalance(e) {
   e.preventDefault();
-	let mobile = document.getElementById('dmob').value
-	let balance = document.getElementById('dbalance').value
+  let mobile = document.getElementById('dmob').value
+  let balance = document.getElementById('dbalance').value
   await axios({
     method: 'put',
     url: `${env.apiUrl}/deductbalance.php`,
