@@ -38,19 +38,64 @@
   </head>
   <body>
     <br />
-    <div class="container w-25">
-      <div class="input-group">
-        <div class="form-outline">
-          <input
-            type="text"
-            id="formControlLg"
-            class="form-control form-control-lg"
-          />
-          <label class="form-label" for="form1">Search</label>
+    <div class="container">
+      <div class="row align-items-middle justify-content-between">
+        <div class="col-md-6 col-12">
+          <div class="input-group">
+            <div class="form-outline">
+              <input
+                type="text"
+                id="search-withdrawal"
+                class="form-control form-control-lg"
+              />
+              <label class="form-label" for="form1">Search</label>
+            </div>
+            <button id="search-withdrawal-btn" type="button" class="btn btn-danger">
+              <i class="fas fa-search">Search</i>
+            </button>
+          </div>
         </div>
-        <button id="search-button" type="button" class="btn btn-danger">
-          <i class="fas fa-search">Search</i>
-        </button>
+        <div class="col-md-3 col-12">
+          <div class="btn-group">
+            <input
+              type="radio"
+              class="btn-check"
+              name="all"
+              id="withdraw-all"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-secondary" for="withdraw-all">All</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="paid"
+              id="withdraw-paid"
+              autocomplete="off"
+            />
+            <label class="btn btn-secondary" for="withdraw-paid">Paid</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="pending"
+              id="withdraw-pending"
+              autocomplete="off"
+            />
+            <label class="btn btn-secondary" for="withdraw-pending"
+              >Pending</label
+            >
+            <input
+              type="radio"
+              class="btn-check"
+              name="cancelled"
+              id="withdraw-cancelled"
+              autocomplete="off"
+            />
+            <label class="btn btn-secondary" for="withdraw-cancelled"
+              >Cancelled</label
+            >
+          </div>
+        </div>
       </div>
     </div>
     <div class="m-4">
@@ -73,65 +118,24 @@
             <th scope="col">Action</th>
           </tr>
         </thead>
-        <tbody id="withdraw-history">
-          <tr>
-            <td>1</td>
-            <td>9634780846</td>
-            <td>9634780846</td>
-            <td>12:30 AM</td>
-            <td>50</td>
-            <td>30</td>
-            <td>upi</td>
-            <td>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
-                />
-                <label class="form-check-label" for="flexCheckDefault">
-                  paid
-                </label>
-              </div>
-            </td>
-            <td>BOB</td>
-            <td>12345678912345</td>
-            <td>Akshat</td>
-            <td>BOB000BY</td>
-            <td>Saving</td>
-            <td>
-              <div class="dropdown">
-                <a
-                  class="dropdown-toggle hidden-arrow"
-                  type="button"
-                  id="dropdownMenuicon"
-                  data-mdb-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-ellipsis-v fa-lg text-dark"></i>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuicon">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <i class="fas fa-plus-circle"></i> Add Balance</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <i class="fas fa-minus-circle"></i> Deduct Balance</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <i class="fas fa-door-open pe-2"></i>Deactivate</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </td>
-          </tr>
-        </tbody>
+        <tbody id="withdraw-history"></tbody>
+        <!-- <tfoot id="withdraw-history-footer">
+          <nav>
+            <ul class="pagination">
+              <li class="page-item">
+                <button class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </button>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item">
+                <button class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </tfoot> -->
       </table>
     </div>
     <!-- BOOTSTRAP -->

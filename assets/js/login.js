@@ -20,10 +20,6 @@ async function login(e) {
       mobile: mobile,
       password: password
     },
-    // headers: {
-    //   'Content-Type': 'application/json',
-    //   'authorization': "Bearer " + token
-    // }
   }).then((res) => {
     if (res.data.success == 1) {
       session = res.data.mobile;
