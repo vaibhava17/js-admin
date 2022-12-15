@@ -31,7 +31,7 @@ async function login(e) {
       if (res.data.role == "admin") {
         window.location.href = env.adminBaseUrl;
       } else {
-        window.location.href = env.baseUrl;
+        window.location.href = env.apiUrl;
       }
     } else {
       alert(res.data.message);
