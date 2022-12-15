@@ -168,7 +168,7 @@ async function deductBalance(e) {
   let mobile = document.getElementById('dmob').value
   let balance = document.getElementById('dbalance').value
   await axios({
-    method: 'put',
+    method: 'post',
     url: `${env.apiUrl}/deductbalance.php`,
     data: {
       mobile: mobile,
