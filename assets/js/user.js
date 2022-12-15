@@ -57,7 +57,7 @@ async function users(args) {
                 <td>${item.mobile}</td>
                 <td>${item.balance}</td>
                 <td>${item.role}</td>
-                <td class="${item.active == '0' ? 'bg-warning text-white' : 'bg-light'}">${item.active == "0" ? "Deactive" : "Active"}</td>
+                <td class="${item.active == '1' ? 'bg-warning text-white' : 'bg-light'}">${item.active == "1" ? "Deactive" : "Active"}</td>
                 <td>${item.exposer}</td>
                 <td>
                   <div class="dropdown">

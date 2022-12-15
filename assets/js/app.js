@@ -139,6 +139,19 @@ async function updateWithdrawalStatusCancelled(withdrawid) {
 }
 
 // Add balance to user account
+function checkRole() {
+  if (role !== 'admin') {
+    window.location.href = env.baseUrl;
+  }
+}
+
+checkRole();
+
+function createUrl(url, params) {
+  const myUrlWithParams = new URL(url);
+  Object.keys(params).forEach(key => myUrlWithParams.searchParams.append(key, params[key]))
+  return myUrlWithParams.href;
+}
 async function addBalance(e) {
   e.preventDefault();
   let mobile = document.getElementById('mobile').value
