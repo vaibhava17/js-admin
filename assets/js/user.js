@@ -6,7 +6,7 @@ const env = {
   apiUrl: 'https://newkhel.in',
   // apiUrl: 'http://localhost/game',
   // apiUrl: 'http://localhost/apps/js-game',
-baseUrl: 'https://newkhel.in/index.html',
+  baseUrl: 'https://newkhel.in/adminindex.html',
    // baseUrl: 'http://localhost/game/index.html',
   // baseUrl: 'http://localhost/apps/js-game/index.html',
   adminBaseUrl: 'https://admin.newkhel.in/user.html',
@@ -16,7 +16,7 @@ baseUrl: 'https://newkhel.in/index.html',
 
 function checkRole() {
   if (role !== 'admin') {
-    window.location.href = env.apiUrl;
+    window.location.href = env.baseUrl;
   }
 
 }
