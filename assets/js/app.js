@@ -6,7 +6,7 @@ const env = {
   apiUrl: 'https://newkhel.in',
   // apiUrl: 'http://localhost/game',
   // apiUrl: 'http://localhost/apps/js-game',
-  baseUrl: 'https://newkhel.in/admin/main.html',
+  baseUrl: 'https://newkhel.in/admin/user.html',
   // baseUrl: 'http://localhost/game/index.html',
   // baseUrl: 'http://localhost/apps/js-game/index.html',
   adminBaseUrl: 'https://admin.newkhel.in/user.html',
