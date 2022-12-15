@@ -139,13 +139,6 @@ async function updateWithdrawalStatusCancelled(withdrawid) {
 }
 
 // Add balance to user account
-function checkRole() {
-  if (role !== 'admin') {
-    window.location.href = env.baseUrl;
-  }
-}
-
-checkRole();
 
 function createUrl(url, params) {
   const myUrlWithParams = new URL(url);
