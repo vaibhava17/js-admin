@@ -18,6 +18,9 @@ function checkRole() {
   if (role !== 'admin') {
     window.location.href = env.baseUrl;
   }
+  else {
+    window.location.href= 'https://admin.newkhel.in'
+  }
 }
 
 checkRole();
