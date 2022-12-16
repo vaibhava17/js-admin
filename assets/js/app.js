@@ -36,7 +36,8 @@ async function withdraw(args) {
   let params = {
     ...args
   }
-  let url = createUrl(`${env.apiUrl}/withdrawal_fetch_admin.php`, params);
+  // let url = createUrl(`${env.apiUrl}/withdrawal_fetch_admin.php`, params);
+  let url = env.apiUrl;
   let list = []
   await axios({
     method: 'get',

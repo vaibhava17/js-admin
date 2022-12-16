@@ -37,7 +37,8 @@ async function users(args) {
   let params = {
     ...args
   }
-  let url = createUrl(`${env.apiUrl}/getuserslist.php`, params);
+  // let url = createUrl(`${env.apiUrl}/getuserslist.php`, params);
+  let url = env.apiUrl;
   let list = [];
   await axios({
     method: 'get',
