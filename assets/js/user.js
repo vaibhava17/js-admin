@@ -14,14 +14,14 @@ const env = {
  // adminBaseUrl: 'http://localhost/apps/js-admin/user.html'
 }
 
-function checkRole() {
-  if (role !== 'admin') {
-    window.location.href = env.baseUrl;
-  }
+// function checkRole() {
+//   if (role !== 'admin') {
+//     window.location.href = env.baseUrl;
+//   }
 
-}
+// }
 
-checkRole();
+// checkRole();
 
 function createUrl(url, params) {
   const myUrlWithParams = new URL(url);
