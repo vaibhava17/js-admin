@@ -8,7 +8,7 @@ const env = {
  // baseUrl: 'http://localhost/apps/js-game/index.html',
  // baseUrl: 'http://localhost/admin/index.html',
  // adminBaseUrl: 'http://localhost/apps/js-admin/user.html'
-  adminBaseUrl: 'https://admin.newkhel.in/main.html',
+  adminBaseUrl: 'https://newkhel.in/admin/main.html',
 }
 
 async function login(e) {
