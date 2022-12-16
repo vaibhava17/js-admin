@@ -152,7 +152,7 @@ async function addBalance(e) {
   let balance = document.getElementById('balance').value
   await axios({
     method: 'put',
-    url: `${env.apiUrl}/addbalance.php`,
+    url: createUrl(`${env.apiUrl}/addbalance.php`, params),
     data: {
       mobile: mobile,
       balance: balance
@@ -176,7 +176,7 @@ async function deductBalance(e) {
   let balance = document.getElementById('dbalance').value
   await axios({
     method: 'post',
-    url: `${env.apiUrl}/deductbalance.php`,
+    url: createUrl(`${env.apiUrl}/deductbalance.php`, params),
     data: {
       mobile: mobile,
       balance: balance
