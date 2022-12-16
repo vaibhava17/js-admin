@@ -9,7 +9,7 @@ const env = {
   baseUrl: 'https://newkhel.in/admin/user.html',
   // baseUrl: 'http://localhost/game/index.html',
   // baseUrl: 'http://localhost/apps/js-game/index.html',
-  adminBaseUrl: 'https://admin.newkhel.in/user.html',
+  // adminBaseUrl: 'https://admin.newkhel.in/user.html',
   // adminBaseUrl: 'http://localhost/game/user.html',
   // adminBaseUrl: 'http://localhost/apps/js-admin/user.html'
 }
@@ -139,13 +139,7 @@ async function updateWithdrawalStatusCancelled(withdrawid) {
 }
 
 // Add balance to user account
-function checkRole() {
-  if (role !== 'admin') {
-    window.location.href = env.baseUrl;
-  }
-}
 
-checkRole();
 
 function createUrl(url, params) {
   const myUrlWithParams = new URL(url);
