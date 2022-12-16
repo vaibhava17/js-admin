@@ -157,9 +157,6 @@ async function addBalance(e) {
     data: {
       mobile: mobile,
       balance: balance
-    },
-    headers: {
-      authrization: "Bearer " + token
     }
   }).then((res) => {
     if (res.data.success == 1) {
@@ -182,9 +179,6 @@ async function deductBalance(e) {
       mobile: mobile,
       balance: balance
     },
-    headers: {
-      authrization: "Bearer " + token
-    }
   }).then((res) => {
     if (res.data.success == 1) {
       alert(res.data.message);
