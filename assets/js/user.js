@@ -7,21 +7,21 @@ const env = {
   // apiUrl: 'http://localhost/game',
   // apiUrl: 'http://localhost/apps/js-game',
   baseUrl: 'https://newkhel.in/admin/user.html',
-   // baseUrl: 'http://localhost/game/index.html',
+  // baseUrl: 'http://localhost/game/index.html',
   // baseUrl: 'http://localhost/apps/js-game/index.html',
   adminBaseUrl: 'https://newkhel.in/admin/user.html',
- // adminBaseUrl: 'http://localhost/game/user.html',
- // adminBaseUrl: 'http://localhost/apps/js-admin/user.html'
+  // adminBaseUrl: 'http://localhost/game/user.html',
+  // adminBaseUrl: 'http://localhost/apps/js-admin/user.html'
 }
 
-// function checkRole() {
-//   if (role !== 'admin') {
-//     window.location.href = env.baseUrl;
-//   }
+function checkRole() {
+  if (role !== 'admin') {
+    window.location.href = env.baseUrl;
+  }
+  console.log("role", role);
+}
 
-// }
-
-// checkRole();
+checkRole();
 
 function createUrl(url, params) {
   const myUrlWithParams = new URL(url);
@@ -37,8 +37,7 @@ async function users(args) {
   let params = {
     ...args
   }
-  // let url = createUrl(`${env.apiUrl}/getuserslist.php`, params);
-  let url = env.apiUrl/getuserslist.php;
+  let url = createUrl(`${env.apiUrl}/getuserslist.php`, params);
   let list = [];
   await axios({
     method: 'get',
@@ -59,7 +58,7 @@ async function users(args) {
                 <td>${item.mobile}</td>
                 <td>${item.balance}</td>
                 <td>${item.role}</td>
-                <td class="${item.active == '1' ? 'bg-warning text-white' : 'bg-light'}">${item.active == "1" ? "Deactive" : "Active"}</td>
+                <td class="${item.active == '0' ? 'bg-warning text-white' : 'bg-light'}">${item.active == "1" ? "Active" : "Deactive"}</td>
                 <td>${item.exposer}</td>
                 <td>
                   <div class="dropdown">

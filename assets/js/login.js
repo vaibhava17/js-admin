@@ -1,14 +1,17 @@
 let role = localStorage.getItem('role');
 let session = localStorage.getItem('session');
 let token = localStorage.getItem('token');
+
 const env = {
   apiUrl: 'https://newkhel.in',
-  //apiUrl: 'http://localhost/apps/js-game',
+  // apiUrl: 'http://localhost/apps/js-game',
   //apiUrl: 'http://localhost/game',
- // baseUrl: 'http://localhost/apps/js-game/index.html',
- // baseUrl: 'http://localhost/admin/index.html',
- // adminBaseUrl: 'http://localhost/apps/js-admin/user.html'
-  adminBaseUrl: 'https://newkhel.in/admin/main.html',
+  BaseUrl: 'https://admin.newkhel.in/main.html',
+  // baseUrl: 'http://localhost/apps/js-game/index.html',
+  //  baseUrl: 'http://localhost/admin/main.html',
+  adminBaseUrl: 'https://admin.newkhel.in/main.html',
+  // adminBaseUrl: 'http://localhost/apps/js-admin/main.html'
+  // adminBaseUrl: 'https://localhost/admin/main.html',
 }
 
 async function login(e) {
@@ -37,4 +40,10 @@ async function login(e) {
       alert(res.data.message);
     }
   });
+}
+
+
+function logout() {
+  localStorage.clear();
+  window.location.href = env.baseUrl;
 }

@@ -9,18 +9,18 @@ const env = {
   baseUrl: 'https://newkhel.in/admin/main.html',
   // baseUrl: 'http://localhost/game/index.html',
   // baseUrl: 'http://localhost/apps/js-game/index.html',
-  // adminBaseUrl: 'https://admin.newkhel.in/user.html',
+  adminBaseUrl: 'https://admin.newkhel.in/user.html',
   // adminBaseUrl: 'http://localhost/game/user.html',
   // adminBaseUrl: 'http://localhost/apps/js-admin/user.html'
 }
 
-// function checkRole() {
-//   if (role !== 'admin') {
-//     window.location.href = env.baseUrl;
-//   }
-// }
+function checkRole() {
+  if (role !== 'admin') {
+    window.location.href = env.baseUrl;
+  }
+}
 
-// checkRole();
+checkRole();
 
 function createUrl(url, params) {
   const myUrlWithParams = new URL(url);
@@ -37,7 +37,7 @@ async function withdraw(args) {
     ...args
   }
   // let url = createUrl(`${env.apiUrl}/withdrawal_fetch_admin.php`, params);
-  let url =`${env.apiUrl}/withdrawal_fetch_admin.php`;
+  let url = `${env.apiUrl}/withdrawal_fetch_admin.php`;
   let list = []
   await axios({
     method: 'get',

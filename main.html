@@ -36,22 +36,38 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-
-    <div class="container" style="align-items: center;">
-      <br>
+    <nav>
+      <button
+        type="button"
+        class="btn btn-primary"
+        onclick="logout()"
+        style="float: right; margin-right: 10px; margin-top: 10px"
+      >
+        Logout
+      </button>
+    </nav>
+    <div class="container" style="align-items: center">
+      <br />
       <h1>Welcome To The Roulette Admin Panel</h1>
-      
       <h3>Play Roulette And Win</h3>
-      <br>
-      <br>
-   <a href="https://newkhel.in/admin/withdraw.html"> <button type="button" class="btn btn-primary">Withdraw List</button></a>
-   <br>
-   <br>
-   <a href="https://newkhel.in/admin/user.html"> <button type="button" class="btn btn-primary">User List</button></a>
-   <br>
-   <br>
-   <a href="https://newkhel.in/admin/balance.html"> <button type="button" class="btn btn-primary">Add And Deduct Balance</button></a>
-  </div>
+      <br />
+      <br />
+      <div id="withdraw-btn">
+        <button type="button" class="btn btn-primary">Withdraw List</button></div
+      >
+      <br />
+      <br />
+      <div id="user-btn">
+        <button type="button" class="btn btn-primary">User List</button></div
+      >
+      <br />
+      <br />
+      <div id="add-btn">
+        <button type="button" class="btn btn-primary">
+          Add And Deduct Balance
+        </button></div
+      >
+    </div>
     <!-- BOOTSTRAP -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -59,5 +75,11 @@
       crossorigin="anonymous"
     ></script>
     <!-- Main JS -->
+    <script
+      type="text/javascript"
+      src="./assets/js/main.js"
+    >
+      
+    </script>
   </body>
 </html>
