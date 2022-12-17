@@ -108,7 +108,7 @@ withdraw();
 // Update withdrawal status to paid
 async function updateWithdrawalStatusPaid(withdrawid) {
   await axios({
-    method: 'put',
+    method: 'post',
     url: `${env.apiUrl}/updatewithdrawstatus.php?withdrawid=${withdrawid}&withdrawstatus=paid`,
    
   }).then((res) => {
@@ -123,7 +123,7 @@ async function updateWithdrawalStatusPaid(withdrawid) {
 // Update withdrawal status to cancelled
 async function updateWithdrawalStatusCancelled(withdrawid) {
   await axios({
-    method: 'put',
+    method: 'post',
     url: `${env.apiUrl}/updatewithdrawstatus.php?withdrawid=${withdrawid}&withdrawstatus=cancelled`,
   
   }).then((res) => {
