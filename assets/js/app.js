@@ -110,9 +110,7 @@ async function updateWithdrawalStatusPaid(withdrawid) {
   await axios({
     method: 'put',
     url: `${env.apiUrl}/updatewithdrawstatus.php?withdrawid=${withdrawid}&withdrawstatus=paid`,
-    headers: {
-      authrization: "Bearer " + token
-    }
+   
   }).then((res) => {
     if (res.data.success == 1) {
       alert(res.data.message);
@@ -127,9 +125,7 @@ async function updateWithdrawalStatusCancelled(withdrawid) {
   await axios({
     method: 'put',
     url: `${env.apiUrl}/updatewithdrawstatus.php?withdrawid=${withdrawid}&withdrawstatus=cancelled`,
-    headers: {
-      authrization: "Bearer " + token
-    }
+  
   }).then((res) => {
     if (res.data.success == 1) {
       alert(res.data.message);
