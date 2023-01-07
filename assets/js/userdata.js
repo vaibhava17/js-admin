@@ -99,7 +99,7 @@ async function withdraw(args) {
       } else {
         tableData.innerHTML = "No data found!!"
       }
-      user = res.data.user;
+      user = res.data.user[0];
       document.getElementById('username').innerHTML = user.name;
       document.getElementById('usermobile').innerHTML = user.mobile;
       document.getElementById('userbalance').innerHTML = user.balance;
@@ -155,6 +155,7 @@ async function addBalance(e) {
     if (res.data.success == 1) {
       alert(res.data.message);
       withdraw();
+      getElementById('add-balance').value = "";
     }
   }).catch((err) => {
     alert("Something went wrong!")
@@ -176,6 +177,7 @@ async function deductBalance(e) {
     if (res.data.success == 1) {
       alert(res.data.message);
       withdraw();
+      getElementById('deduct-balance').value = "";
     }
   }).catch((err) => {
     alert("Something went wrong!")
