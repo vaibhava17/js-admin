@@ -242,3 +242,4 @@ searchWithdrawalBtn.addEventListener('click', () => {
     search: searchWithdrawal.value
   });
 });
+
