@@ -15,6 +15,9 @@ const envMain = {
   // addUrl: 'http://localhost/apps/js-admin/balance.html',
   // addUrl: 'http://localhost/admin/balance.html',
   addUrl: 'http://admin.newkhel.in/balance.html',
+    // profileurl: 'http://localhost/apps/js-admin/balance.html',
+   profileurl: 'http://localhost/js-admin',
+ // profileurl: 'http://admin.newkhel.in',
 }
 
 withdrawBtn.addEventListener('click', () => {
@@ -36,3 +39,8 @@ function checkRole() {
   }
 }
 checkRole();
+function gotoprofile(e){
+e.preventDefault()
+let id=document.getElementById("userid").value
+window.location.href =`${envMain.profileurl}/profile.html?id=${id}`;
+}
