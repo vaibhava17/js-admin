@@ -3,14 +3,14 @@ let session = localStorage.getItem('session');
 let token = localStorage.getItem('token');
 
 const env = {
-  // apiUrl: 'https://newkhel.in',
-    apiUrl: 'http://localhost/game',
+   apiUrl: 'https://newkhel.in',
+  //  apiUrl: 'http://localhost/game',
    // apiUrl: 'http://localhost/apps/js-game',
-  // baseUrl: 'https://newkhel.in/admin/main.html',
-    baseUrl: 'http://localhost/game/index.html',
+  baseUrl: 'https://newkhel.in/admin/main.html',
+//    baseUrl: 'http://localhost/game/index.html',
    // baseUrl: 'http://localhost/apps/js-game/index.html',
-  // adminBaseUrl: 'https://admin.newkhel.in/user.html',
-    adminBaseUrl: 'http://localhost/game/user.html',
+   adminBaseUrl: 'https://admin.newkhel.in/user.html',
+  //  adminBaseUrl: 'http://localhost/game/user.html',
    // adminBaseUrl: 'http://localhost/apps/js-admin/user.html'
  }
 
