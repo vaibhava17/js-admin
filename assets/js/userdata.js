@@ -143,7 +143,7 @@ async function updateWithdrawalStatusCancelled(withdrawid) {
 // Add balance to user account
 async function addBalance(e) {
   e.preventDefault();
-  let balance = document.getElementById('add-balance').value
+  let balance = document.getElementById('balance').value
   await axios({
     method: 'put',
     url: ` ${env.apiUrl}/addbalance.php`,
@@ -155,7 +155,7 @@ async function addBalance(e) {
     if (res.data.success == 1) {
       alert(res.data.message);
       withdraw();
-      getElementById('add-balance').value = "";
+      document.getElementById('balance').value = "";
     }
   }).catch((err) => {
     alert("Something went wrong!")
@@ -165,7 +165,7 @@ async function addBalance(e) {
 // deduct balance to user account
 async function deductBalance(e) {
   e.preventDefault();
-  let balance = document.getElementById('deduct-balance').value
+  let balance = document.getElementById('balance').value
   await axios({
     method: 'post',
     url: `${env.apiUrl}/deductbalance.php`,
@@ -177,7 +177,7 @@ async function deductBalance(e) {
     if (res.data.success == 1) {
       alert(res.data.message);
       withdraw();
-      getElementById('deduct-balance').value = "";
+      document.getElementById('balance').value = "";
     }
   }).catch((err) => {
     alert("Something went wrong!")

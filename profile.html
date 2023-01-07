@@ -50,33 +50,37 @@
           <h5>Balance: <span id="userbalance"></span></h5>
           <!-- <h5>Active: <span id="userbalance"></span></h5> -->
         </div>
-        <div class="col-6">
+        <div class="col-8">
           <div class="row">
-            <div class="col-8">
+            <div class="col-12">
               <input
                 type="text"
                 class="form-control"
                 name="balance"
-                id="add-balance"
+                id="balance"
               />
-            </div>
-            <div class="col-4">
-              <button type="button" class="btn btn-primary" onclick="addBalance(event)">Add</button>
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-4">
           <div class="row">
-            <div class="col-8">
-              <input
-                type="text"
-                class="form-control"
-                name="balance"
-                id="deduct-balance"
-              />
+            <div class="col-6 text-center">
+              <button
+                type="button"
+                class="btn btn-primary w-100"
+                onclick="addBalance(event)"
+              >
+                Add
+              </button>
             </div>
-            <div class="col-4">
-              <button type="button" class="btn btn-primary" onclick="deductBalance(event)">Deduct</button>
+            <div class="col-6 text-center">
+              <button
+                type="button"
+                class="btn btn-primary w-100"
+                onclick="deductBalance(event)"
+              >
+                Deduct
+              </button>
             </div>
           </div>
         </div>
